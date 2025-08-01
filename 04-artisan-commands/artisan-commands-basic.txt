@@ -1,0 +1,146 @@
+# Artisan Command কী?
+
+Artisan হলো Laravel-এর CLI (Command Line Interface) tool, যা দিয়ে আপনি Laravel এর project কে efficiently manage করতে পারেন।
+
+# Artisan command Run:
+Artisan command গুলো run করার জন্য আপনাকে Laravel project এর root directory তে যেতে হবে। এরপর টার্মিনালে নিচের কমান্ডটি ব্যবহার করতে হবে:
+
+php artisan 
+php artisan command_name
+
+(এটি Laravel এর সমস্ত available command গুলো দেখাবে।)
+
+# নতুন প্রজেক্ট রান করতে:
+php artisan serve
+
+# All Artisan Command দেখতে:
+php artisan list
+
+
+## Artisan Command এর উদাহরণ:
+1. Artisan দিয়ে cache clear করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan cache:clear
+
+2. মাইগ্রেশন রান করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan migrate
+
+3. নতুন controller তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:controller ControllerName
+
+4. নতুন model তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:model ModelName
+
+5. নতুন migration তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:migration create_table_name
+
+6. নতুন seeder তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:seeder SeederName
+
+7. route:list কমান্ড দিয়ে সমস্ত routes দেখতে পারেন:
+php artisan route:list
+
+8. নতুন middleware তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:middleware MiddlewareName
+
+9. নতুন request তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:request RequestName
+
+10. নতুন job তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:job JobName
+
+11. নতুন event তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:event EventName
+
+12. নতুন listener তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:listener ListenerName  
+
+13. নতুন notification তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:notification NotificationName
+
+14. নতুন policy তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:policy PolicyName
+
+15. নতুন command তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:command CommandName
+example with real: 
+php artisan make:command SendEmailNotification
+
+16. নতুন resource controller তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:controller ResourceControllerName --resource
+
+17. নতুন factory তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:factory FactoryName
+
+18. নতুন test তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:test TestName
+
+19. Optimize the application by clearing compiled files:
+php artisan optimize
+
+20. Configuration cache clear করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan config:clear
+
+21. Configuration cache করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan config:cache
+
+22. Route cache clear করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan route:clear
+
+23. Route cache করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan route:cache
+
+24. View cache clear করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan view:clear
+
+25. View cache করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan view:cache
+
+26. একসাথে সমস্ত cache clear করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan optimize:clear
+
+27. একসাথে মডেল, মাইগ্রেশন, কন্ট্রোলার, এবং ফ্যাক্টরি তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:model ModelName -mcf
+
+28. নতুন API resource তৈরি করতে নিচের কমান্ডটি ব্যবহার করুন:
+php artisan make:resource ResourceName
+
+# Artisan Command এর সুবিধা:
+1. **দ্রুত Development**: Artisan command গুলো দিয়ে আপনি দ্রুত এবং সহজে বিভিন্ন কাজ করতে পারেন, যা development process কে দ্রুত করে তোলে।
+2. **Automation**: অনেক কাজ যেমন মাইগ্রেশন, cache management ইত্যাদি automate করা যায়, যা manual কাজের প্রয়োজন কমিয়ে দেয়।
+3. **Customization**: আপনি নিজের প্রয়োজন অনুযায়ী custom Artisan command তৈরি করতে পারেন, যা আপনার project এর জন্য বিশেষভাবে উপযোগী হতে পারে।
+4. **Built-in Commands**: Laravel এর সাথে অনেক built-in Artisan command থাকে, যা আপনাকে বিভিন্ন কাজ করতে সাহায্য করে, যেমন মাইগ্রেশন, cache management, controller/model creation ইত্যাদি।
+
+# Artisan Command এর সাহায্য:
+Artisan command গুলো Laravel এর development process কে সহজ করে তোলে। এগুলো দিয়ে আপনি বিভিন্ন কাজ যেমন মাইগ্রেশন, cache management, controller/model creation ইত্যাদি দ্রুত এবং সহজে করতে পারেন।
+
+## সব Artisan Command এর তালিকা: (প্রয়োজনীয় সকল command গুলো এখানে উল্লেখ করা হলো)
+# Artisan Command এর তালিকা:
+1. `php artisan list` - সমস্ত Artisan command এর তালিকা দেখায়।
+2. `php artisan help command_name` - নির্দিষ্ট command এর সাহায্য দেখায়।
+3. `php artisan make:controller ControllerName` - নতুন controller তৈরি করে। 
+4. `php artisan make:model ModelName` - নতুন model তৈরি করে।
+5. `php artisan make:migration create_table_name` - নতুন migration তৈরি করে।
+6. `php artisan make:seeder SeederName` - নতুন seeder তৈরি করে।
+7. `php artisan make:middleware MiddlewareName` - নতুন middleware তৈরি করে।
+8. `php artisan make:request RequestName` - নতুন request তৈরি করে।
+9. `php artisan make:job JobName` - নতুন job তৈরি করে।  
+10. `php artisan make:event EventName` - নতুন event তৈরি করে।
+11. `php artisan make:listener ListenerName` - নতুন listener তৈরি করে।
+12. `php artisan make:notification NotificationName` - নতুন notification তৈরি করে।
+13. `php artisan make:policy PolicyName` - নতুন policy তৈরি করে।
+14. `php artisan make:command CommandName` - নতুন command তৈরি করে।
+15. `php artisan make:controller ResourceControllerName --resource` - নতুন resource controller তৈরি করে।
+16. `php artisan make:factory FactoryName` - নতুন factory তৈরি করে।
+17. `php artisan make:test TestName` - নতুন test তৈরি করে।
+18. `php artisan optimize` - application কে optimize করে।
+19. `php artisan cache:clear` - cache clear করে।
+20. `php artisan config:clear` - configuration cache clear করে।
+21. `php artisan config:cache` - configuration cache করে।
+22. `php artisan route:clear` - route cache clear করে।
+23. `php artisan route:cache` - route cache করে।
+24. `php artisan view:clear` - view cache clear করে।
+25. `php artisan view:cache` - view cache করে।
+26. `php artisan optimize:clear` - সমস্ত cache clear করে।
+27. `php artisan make:model ModelName -mcf` - মডেল, মাইগ্রেশন, কন্ট্রোলার, এবং ফ্যাক্টরি একসাথে তৈরি করে।
+28. `php artisan make:resource ResourceName` - নতুন API resource তৈরি করে।
+

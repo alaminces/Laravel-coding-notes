@@ -1,0 +1,41 @@
+
+============================Maintenance Mode Start============================
+
+1. Maintenance Mode (Server Down করার মত কাজ)
+php artisan down
+
+=> ব্যবহারকারীদের জন্য সাইট বন্ধ করে একটা “Maintenance” পেজ দেখায়।
+=> ডিফল্টভাবে maintenance mode চালু করবে।
+=> এখন ইউজাররা সাইট অ্যাক্সেস করতে পারবেন না, maintenance পেজ দেখাবে।
+
+
+2. Bring Server Up (Maintenance Mode থেকে আনা)
+php artisan up
+
+=> সাইট আবার চালু হয়ে যাবে, ইউজাররা সাইট দেখতে পারবে।
+============================Maintenance Mode End============================
+
+
+============================Custom Message Start============================
+
+3. Maintenance Mode with Custom Message
+php artisan down 
+
+# Create a blade file for custom message
+resources/views/errors/503.blade.php
+
+<body>
+    <h1>আমরা একটু বিরতি নিচ্ছি!</h1>
+    <p>সাইটটি এখন রক্ষণাবেক্ষণে রয়েছে। অনুগ্রহ করে পরে আবার চেষ্টা করুন।</p>
+</body>
+
+Note: --message অপশন পুরোনো Laravel ভার্সনে ছিল, এখন custom 503.blade.php view দিয়ে মেসেজ দেখানো হয়।
+
+============================Custom Message End============================
+
+
+
+
+
+
+

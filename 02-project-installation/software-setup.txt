@@ -1,0 +1,29 @@
+## Laravel Project চালানোর জন্য প্রয়োজনীয় সফটওয়্যার :
+
+1. PHP
+Laravel চলানোর জন্য কমপক্ষে PHP 8.1 বা তার উপরের ভার্সন লাগবে।
+
+2. Composer
+PHP এর জন্য ডিপেনডেন্সি ম্যানেজার। Laravel এর লাইব্রেরি গুলো ইনস্টল করার জন্য দরকার।
+
+3. Web Server
+সাধারণত Apache বা Nginx। ডেভেলপমেন্টের জন্য Laravel Sail বা Laravel Homestead ইউজ করা যায়।
+বিকল্প হিসেবে XAMPP / WAMP / Laragon ব্যবহার করতে পারেন যেটা Apache + PHP + MySQL সহ আসে।
+
+4. Database Server
+MySQL, MariaDB, PostgreSQL, অথবা SQLite যেকোনো একটি।
+
+5. Node.js এবং npm
+ফ্রন্টএন্ড অ্যাসেট কম্পাইল করার জন্য (যেমন: Tailwind CSS, Vue.js)।
+(যদি আপনার প্রজেক্টে ফ্রন্টএন্ড টুল ব্যবহার করেন)
+
+
+## Version Check করার Command গুলো
+
+PHP -   php -v	-   আপনার সিস্টেমে PHP এর ভার্সন দেখাবে
+Composer	-   composer -V	    -   Composer এর ভার্সন চেক করবে
+Laravel (প্রজেক্টের ভেতরে)	-   php artisan --version	-   Laravel প্রজেক্টের ভার্সন জানাবে
+Node.js	    -   node -v	    -   Node.js এর ভার্সন দেখাবে
+npm	    -   npm -v	    -   npm (Node Package Manager) এর ভার্সন
+Git	    -   git --version	-       Git এর ভার্সন
+MySQL	-      mysql --version	    -   MySQL সার্ভারের ভার্সন

@@ -1,0 +1,68 @@
+1. create laravel project
+
+2. install laravel breeze
+composer require laravel/breeze --dev
+php artisan breeze:install
+npm install && npm run dev
+
+3. migration create
+$table->enum('role',['admin','vendor','customer','rider'])->default('customer')->index();
+$table->enum('status',['active','inactive'])->index();
+
+4. create user seeder
+// admin
+User::factory()->create([
+    'name' => 'admin',
+    'email' => 'admin@gmail.com',
+    'role' => 'admin',
+    'status' => 'active',
+    'password' => bcrypt('1234')
+]);
+
+// vendor
+User::factory()->create([
+    'name' => 'vendor',
+    'email' => 'vendor@gmail.com',
+    'role' => 'vendor',
+    'status' => 'active',
+    'password' => bcrypt('1234')
+]);
+
+php artisan migrate:fresh --seed 
+or 
+php artisan db:seed 
+
+5. create route (admin,vendor)
+
+> register route in web.php
+require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
+require __DIR__.'/vendor.php';
+
+Route::middleware(['auth','role:admin'])
+->prefix('admin')
+->as('admin.')
+->group(function() {
+    Route::get('/dashboard',[AdminDashboardController::class,'index'])->name('dashboard');
+});
+
+6. create controller (admin,vendor)
+php artisan make:controller Admin/AdminDashboardController
+
+7. create middleware (role)
+php artisan make:middleware RoleMiddleware
+
+if($request->user() && $request->user()->role != $role) {
+    return abort(403,'Unauthorized');
+    // return redirect()->route('login');
+}
+
+8. check role by access(login store method/login process)
+
+if ( $request->user()->role == 'admin' ) {
+    return redirect()->intended(route('admin.dashboard', absolute: false));
+}elseif ($request->user()->role == 'vendor') {
+    return redirect()->intended(route('vendor.dashboard', absolute: false));
+}else {
+    return redirect()->intended(route('dashboard', absolute: false));
+}

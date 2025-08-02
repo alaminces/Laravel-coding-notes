@@ -346,7 +346,31 @@ Route::prefix('user')
 ?>
 Note: php artisan route:list --path=admin
 
-================outes================
+================Route Facades================
+// এই তিনটি method আসলে Router class থেকে আসে:
+<?php
+use Illuminate\Support\Facades\Route;
+Route::current();               
+Route::currentRouteName();     
+Route::currentRouteAction();
+
+route()->current(); // Get the current route instance
+route()->currentRouteName(); // Get the name of the current route
+route()->currentRouteAction(); // Get the action of the current route
+
+// Example usage in a controller
+use Illuminate\Support\Facades\Route;
+if (Route::currentRouteName() === 'home') {
+    return 'home active';
+}else {
+    return 'home not active';
+}
+
+return Route::currentRouteNamed('home') ? 'active' : 'inactive';
+
+?>
+
+
 ================outes================
 ================outes================
 ================outes================

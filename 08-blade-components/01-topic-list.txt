@@ -1,0 +1,90 @@
+📜 Laravel Blade Components শেখার সম্পূর্ণ টপিক লিস্ট
+
+1️⃣ বেসিক ধারণা
+Component কী এবং কেন ব্যবহার করব
+
+Anonymous Component (শুধু Blade ফাইল)
+
+Class-based Component (Blade + PHP ক্লাস)
+
+Components তৈরি করার Artisan Command
+
+Components ফাইলের লোকেশন ও স্ট্রাকচার
+
+2️⃣ Data Passing
+অ্যাট্রিবিউট দিয়ে ডেটা পাঠানো (<x-alert message="..." />)
+
+Constructor দিয়ে ডেটা রিসিভ করা (Class-based Component)
+
+ডিফল্ট ভ্যালু সেট করা
+
+Multiple ডেটা পাঠানো
+
+3️⃣ Slots
+Default Slot ($slot)
+
+Named Slots (<x-slot:name>)
+
+Multiple Named Slots
+
+Default content in slots
+
+4️⃣ Component Attributes
+$attributes দিয়ে ডাইনামিক HTML Attributes
+
+merge() মেথড দিয়ে ডিফল্ট এবং কাস্টম অ্যাট্রিবিউট মার্জ করা
+
+class মার্জ করা (Tailwind বা Bootstrap স্টাইলিং এর জন্য)
+
+Conditional attributes (@class এবং $attributes->class())
+
+5️⃣ Nested Components
+একটি কম্পোনেন্টের ভেতরে আরেকটি কম্পোনেন্ট
+
+Complex Layout Components (যেমন Card এর ভিতরে Button)
+
+6️⃣ Reusability & Organization
+Components ফোল্ডার ও সাবফোল্ডার স্ট্রাকচার
+
+Namespace ব্যবহার করে Components সংগঠিত করা
+
+Global components registration
+
+7️⃣ Dynamic Components
+<x-dynamic-component :component="$name" />
+
+ভিন্ন ভিন্ন কম্পোনেন্ট ডাইনামিকভাবে লোড করা
+
+8️⃣ Advanced Features
+View Composer বনাম Component
+
+Props Type-hinting (PHP 8 টাইপস)
+
+Components এ Blade Directives ব্যবহার
+
+Components থেকে ইভেন্ট পাঠানো (JavaScript & Livewire integration)
+
+Inline Components (php artisan make:component --inline)
+
+9️⃣ Best Practices
+Small & Focused Components তৈরি করা
+
+Blade Component + Tailwind CSS/Bootstrap কম্বিনেশন
+
+DRY Principle (Don't Repeat Yourself) মেনে কাজ করা
+
+Reusable UI Elements বানানো (Navbar, Footer, Alerts, Forms)
+
+
+🔟 প্র্যাকটিস আইডিয়া
+Alert Component → success, error, warning
+
+Button Component → primary, secondary, outline
+
+Card Component → title, body, footer
+
+Modal Component → title, body, action button
+
+Form Input Component → label, type, placeholder
+
+Layout Component → navbar, sidebar, footer সহ

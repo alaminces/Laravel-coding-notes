@@ -1,0 +1,82 @@
+Laravel Validation শেখার জন্য টপিক লিস্ট
+১. Validation Basics
+কীভাবে $request->validate() ব্যবহার করে ডেটা ভ্যালিডেশন করবেন
+
+ভ্যালিডেশন রুলস (rules) কী এবং কীভাবে প্রয়োগ করবেন
+
+ভ্যালিডেশন এরর মেসেজ কিভাবে কাস্টমাইজ করবেন
+
+২. Validation Rules (মূল রুলস)
+required, nullable
+
+string, integer, numeric, boolean
+
+email, url, ip
+
+max, min, between (সংখ্যা ও স্ট্রিং উভয়ের জন্য)
+
+confirmed (password_confirmation)
+
+unique (ডাটাবেজের জন্য)
+
+in, not_in (fixed value গুলোর ভিতর থেকে নির্বাচন)
+
+regex (কাস্টম প্যাটার্ন চেক)
+
+accepted (terms & conditions এর জন্য)
+
+৩. Advanced Validation Rules
+date, before, after, before_or_equal, after_or_equal
+
+file, image, mimes, mimetypes, max (ফাইল আপলোডের নিয়ম)
+
+array, distinct (অ্যারে ডেটার জন্য)
+
+sometimes (শর্তসাপেক্ষে ভ্যালিডেশন)
+
+required_if, required_unless, required_with, required_without ইত্যাদি conditional rules
+
+৪. Custom Validation
+কাস্টম ভ্যালিডেশন রুল ক্লাস তৈরি (php artisan make:rule)
+
+কাস্টম রুলে লজিক লেখা এবং ব্যবহার করা
+
+Closure-based কাস্টম ভ্যালিডেশন
+
+৫. Validation এরর Handling
+এরর মেসেজ Blade টেমপ্লেটে দেখানো
+
+একাধিক এরর একসাথে দেখানো
+
+Redirect with old input and errors
+
+৬. Form Request Classes
+php artisan make:request দিয়ে ফর্ম রিকোয়েস্ট ক্লাস তৈরি
+
+Form Request এ rules ও authorize method ব্যবহার
+
+Controller এ Form Request inject করা
+
+কাস্টম এরর মেসেজ ও লগিক Form Request এ রাখা
+
+৭. Localization (ভাষান্তর)
+Validation এরর মেসেজ বাংলায় বা অন্য ভাষায় কাস্টমাইজ করা
+
+resources/lang ফোল্ডারে মেসেজ কনফিগারেশন
+
+৮. Conditional Validation
+sometimes রুল ব্যবহার করে শর্তসাপেক্ষে ভ্যালিডেশন করা
+
+ভিন্ন ভিন্ন কন্ডিশন অনুযায়ী ভ্যালিডেশন লজিক পরিবর্তন
+
+৯. Nested Data Validation
+মাল্টিডাইমেনশনাল অ্যারে ও অবজেক্ট ডেটার validation
+
+ডট নোটেশন ব্যবহার করে nested ফিল্ড চেক করা (e.g. address.street)
+
+১০. Validation এর Performance Best Practices
+যতটা সম্ভব কাস্টম রুলে ব্যাবহার করা
+
+ফর্ম রিকোয়েস্ট ব্যবহার করা
+
+প্রয়োজন অনুযায়ী ভ্যালিডেশন কমানো বা শর্তসাপেক্ষ করা
